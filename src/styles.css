@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@400;600&display=swap");
+
 .App {
   max-width: 600px;
   margin: auto;
@@ -6,6 +8,6 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Acme", sans-serif;
   background-color: #efefef;
 }
