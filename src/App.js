@@ -4,9 +4,7 @@ const movieDB = {
   SciFi: [
     { name: "Avatar (2009)", rating: "9/10" },
     { name: "12 Monkeys", rating: "8.8/10" },
-    { name: "Interstellar", rating: "8.7/10" },
     { name: "Tomorrowland", rating: "8.6/10" },
-    { name: "The Fifth Element", rating: "8/10" },
     { name: "Arrival", rating: "7.8/10" }
   ],
   Fantasy: [
@@ -46,7 +44,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>🎥 Cool Zone </h1>
-      <p style={{ fontSize: "smaller" }}>
+      <p style={{ fontSize: "smaller", marginTop: "-0.8rem" }}>
         Checkout my favorite mo. Select a genre to get started
       </p>
 
@@ -57,10 +55,10 @@ export default function App() {
             style={{
               cursor: "pointer",
               background: "#E5E7EB",
-              borderRadius: "1rem",
+              borderRadius: "0.3rem",
               padding: "0.5rem  1rem",
               border: "2px solid black",
-              margin: "1rem 0.3rem"
+              margin: "1rem 0.3rem 0.5rem "
             }}
           >
             {genre}
