@@ -1,63 +1,96 @@
 import React, { useState } from "react";
 import "./styles.css";
 const movieDB = {
-  Horror: [
-    { name: "Psycho", rating: "9/10" },
-    { name: "The Shining", rating: "8.8/10" },
-    { name: "Alien", rating: "8.7/10" },
-    { name: "Tumbbad", rating: "8.6/10" },
-    { name: "The Blue Elephant", rating: "8/10" },
-    { name: "The Cabinet of Dr. Caligari", rating: "7.8/10" },
-    { name: "The Exorcist", rating: "7.5/10" }
-  ],
-  Action: [
-    { name: "The Dark Knight", rating: "9/10" },
-    { name: "The Lord of rings : The return of king", rating: "8.8/10" },
-    { name: "The Mountain II", rating: "8.7/10" },
-    { name: "Inception", rating: "8.6/10" },
-    { name: "The Matrix", rating: "8/10" }
-  ],
-
-  Drama: [
-    { name: "The Shawshank Redemption", rating: "9/10" },
-    { name: "Hababam Sinifi", rating: "8.8/10" },
-    { name: "The God Father", rating: "8.7/10" },
-    { name: "Schinder's List", rating: "8.6/10" },
-    { name: "Fight Club", rating: "8/10" },
-    { name: "Forest Gump", rating: "7.8/10" },
-    { name: "Parasite", rating: "7.5/10" }
-  ],
-  War: [
-    { name: "The Mountain II", rating: "9/10" },
-    { name: "Saving Private Ryan", rating: "8.8/10" },
-    { name: "LIfe Is Beautiful", rating: "8.7/10" },
-    { name: "The Painist", rating: "8.6/10" },
-    { name: "Grave of Fireflies", rating: "8/10" },
-    { name: "Apocalypse Now", rating: "7.8/10" },
-    { name: "Paths of Glory", rating: "7.5/10" }
-  ],
-  SciFiction: [
-    { name: "Inception", rating: "9/10" },
-    { name: "The Matrix", rating: "8.8/10" },
+  SciFi: [
+    { name: "Avatar (2009)", rating: "9/10" },
+    { name: "12 Monkeys", rating: "8.8/10" },
     { name: "Interstellar", rating: "8.7/10" },
-    { name: "The Prestige", rating: "8.6/10" },
-    { name: "Terminator 2 - Judgement Day", rating: "8/10" },
-    { name: "Back to the Future", rating: "7.8/10" },
-    { name: "Avengers: Infinity war", rating: "7.5/10" }
+    { name: "Tomorrowland", rating: "8.6/10" },
+    { name: "The Fifth Element", rating: "8/10" },
+    { name: "Arrival", rating: "7.8/10" }
+  ],
+  Fantasy: [
+    { name: "The Chronicles of Narnia (2005)", rating: "8.8/10" },
+    { name: "Pan’s Labyrinth (2006)", rating: "8.7/10" },
+    { name: "Game of Thrones (2011)", rating: "8/10" },
+    { name: "The Monkey King (2014)", rating: "7.5/10" }
+  ],
+  Romance: [
+    { name: "Blue Valentine", rating: "9/10" },
+    { name: "Revolutionary Road", rating: "8.8/10" },
+    { name: "Unfaithful", rating: "8.7/10" },
+    { name: "Jane Eyre", rating: "8.6/10" }
+  ],
+  Thriller: [
+    { name: "Burning (2018)", rating: "9/10" },
+    { name: "Source Code (2011)", rating: "8.8/10" },
+    { name: "Good Time (2017)", rating: "8.7/10" },
+    { name: "Blue Velvet (1986)", rating: "8.6/10" }
+  ],
+  Drama: [
+    { name: "Parasite", rating: "7.5/10" },
+    { name: "Forest Gump", rating: "7.8/10" },
+    { name: "The Shawshank Redemption", rating: "9/10" },
+    { name: "The God Father", rating: "8.7/10" }
   ]
 };
 
 var movies = Object.keys(movieDB);
 
 export default function App() {
-  const [userGenre, setgenre] = useState("SciFiction");
+  const [userGenre, setGenre] = useState("SciFi");
 
   function genreClickHandler(genre) {
-    setgenre(genre);
+    setGenre(genre);
   }
   return (
     <div className="App">
       <h1>🎥 Cool Zone </h1>
+      <p style={{ fontSize: "smaller" }}>
+        Checkout my favorite mo. Select a genre to get started
+      </p>
+
+      <div>
+        {movies.map((genre) => (
+          <button
+            onClick={() => genreClickHandler(genre)}
+            style={{
+              cursor: "pointer",
+              background: "#E5E7EB",
+              borderRadius: "1rem",
+              padding: "0.5rem  1rem",
+              border: "2px solid black",
+              margin: "1rem 0.3rem"
+            }}
+          >
+            {genre}
+          </button>
+        ))}
+      </div>
+
+      <hr />
+
+      <div style={{ textAlign: "left" }}>
+        <ul style={{ paddingInlineStart: "0" }}>
+          {movieDB[userGenre].map((movie) => (
+            <li
+              key={movie.name}
+              style={{
+                listStyle: "none",
+                padding: "1rem",
+                border: "1.8px solid #D1D5DB",
+                width: "70%",
+                margin: "1rem 0rem",
+                borderRadius: "1rem"
+              }}
+            >
+              {" "}
+              <div style={{ fontSize: "larger" }}> {movie.name} </div>
+              <div style={{ fontSize: "smaller" }}> {movie.rating} </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
