@@ -43,9 +43,9 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1>🎥 Cool Zone </h1>
+      <h1>🎥 Cool Zone | Movie Recommendation </h1>
       <p style={{ fontSize: "smaller", marginTop: "-0.8rem" }}>
-        Checkout my favorite mo. Select a genre to get started
+        Checkout my favorite movie. Select a genre to get started
       </p>
 
       <div>
