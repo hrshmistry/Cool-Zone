@@ -45,7 +45,7 @@ export default function App() {
     <div className="App">
       <h1>🎥 Cool Zone | Movie Recommendation </h1>
       <p style={{ fontSize: "smaller", marginTop: "-0.8rem" }}>
-        Checkout my favorite movie. Select a genre to get started
+        Checkout my favorite movies, Select a genre to get started.
       </p>
 
       <div>
@@ -55,7 +55,7 @@ export default function App() {
             style={{
               cursor: "pointer",
               background: "#C7D2FE",
-              borderRadius: "0.3rem",
+              borderRadius: "0.4rem",
               padding: "0.5rem  1rem",
               border: "2px solid black",
               margin: "1rem 0.3rem 0.5rem "
