@@ -50,17 +50,7 @@ export default function App() {
 
       <div>
         {movies.map((genre) => (
-          <button
-            onClick={() => genreClickHandler(genre)}
-            style={{
-              cursor: "pointer",
-              background: "#C7D2FE",
-              borderRadius: "0.4rem",
-              padding: "0.5rem  1rem",
-              border: "2px solid black",
-              margin: "1rem 0.3rem 0.5rem "
-            }}
-          >
+          <button onClick={() => genreClickHandler(genre)} style={{}}>
             {genre}
           </button>
         ))}
