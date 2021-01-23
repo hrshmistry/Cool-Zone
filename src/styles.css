@@ -15,7 +15,7 @@ body {
 
 button {
   font-weight: bold;
-  cursor: "pointer";
+  cursor: pointer;
   background: #c7d2fe;
   border-radius: 0.4rem;
   padding: 0.5rem 1rem;
