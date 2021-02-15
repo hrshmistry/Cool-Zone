@@ -1,5 +1,5 @@
 # 🎥 Cool Zone | Movie Recommendation
-
+  
 <p float="center"> 
-  <img src="/screenshots/main.png"/>
+  <kbd><img src="/screenshots/main.png"/></kbd>
 </p>
